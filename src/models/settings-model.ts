@@ -32,6 +32,8 @@ export class SettingsModel {
     }
 
     // Misc
+    useCorsProxy: boolean = true;
+
     chatEnabled: boolean = false;
 
     gameOverText: string = "Game Over";

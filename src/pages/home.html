@@ -315,6 +315,13 @@
                 <input type="number" min="0" max="1" step="0.1" value.bind="settings.gameOverOpacity | number" />
             </div>
 
+            <h2>Misc</h2>
+
+            <div class="input">
+                <label>Use CORS Proxy</label>
+                <input type="checkbox" checked.bind="settings.useCorsProxy" />
+            </div>
+
             <button click.delegate="saveSettings()">Save</button>
         </div>
 

@@ -53,11 +53,11 @@ export class CyberballScene extends Phaser.Scene {
         this.load.multiatlas('player', `${this.settings.baseUrl}/player.json`, 'assets');
 
         if(this.settings.player.portrait)
-            this.load.image('playerPortrait', 'https://proxy.cors.sh/' + this.settings.player.portrait);
+            this.load.image('playerPortrait', (this.settings.useCorsProxy ? 'https://proxy.cors.sh/' : '') + this.settings.player.portrait);
 
         this.settings.computerPlayers.forEach((cpu, i) => {
             if(cpu.portrait)
-                this.load.image('cpuPortrait' + i, 'https://proxy.cors.sh/' + cpu.portrait);
+                this.load.image('cpuPortrait' + i, (this.settings.useCorsProxy ? 'https://proxy.cors.sh/' : '') + cpu.portrait);
         });
     }
 
